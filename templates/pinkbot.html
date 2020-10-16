@@ -7,11 +7,29 @@
     {% extends "base.html" %}
     {% block content %}
 
-    <!--
-    <iframe src="https://d3g60fts6ncstu.cloudfront.net/"></iframe>
-    //-->
+    <div class="container">
+        <div id="chatbot">
+            <div class="content">
+                <div class="contact-profile">
+                  <img src="/static/favicon.png" alt=""/>
+                  <p>PINK BOT</p>
+                </div>
 
+                <div class="messages">
+                    <p class="botText"><span>Hi, I'm PinkBot!</span></p>
+                    <p class="userText"><span>{{conversation[-2]}}</span></p>
+                    <p class="botText"><span>{{conversation[-1]}}</span></p>
+                </div>
 
+                <form class="form-inline" action="{{ url_for('get_bot_response') }}" method="get" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <input id="textInput" class="form-control" type="text" name="msg" placeholder="Type Your Message...">
+                    <input id="buttonInput" class="btn form-control" type="submit" value="Send">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
     {% endblock %}
