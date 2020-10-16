@@ -2,19 +2,22 @@
 <html lang="en" dir="ltr">
 
 <head>
-   <meta charset="utf-8">
-   <title>Flask Parent Template</title>
+    <meta charset="utf-8">
+    <title>Pink Smile</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="static/favicon.png" />
+    <!-- Add icon library for social buttons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
  <body>
     <header>
       <div class="container">
-        <h1 class="logo">Pink Smile</h1>
+        <h1>Pink Smile</h1>
         <strong><nav>
-          <ul class="menu">
-            <li><a href="{{ url_for('stats') }}">Stats</a></li>
-            <li><a href="{{ url_for('stories') }}">Story</a></li>
+          <ul>
+              <li><a href="{{ url_for('stats') }}">Stats</a></li>
+              <li><a href="{{ url_for('stories') }}">Stories</a></li>
               <li><a href="{{ url_for('media') }}">Media</a></li>
           </ul>
         </nav></strong>
@@ -25,4 +28,19 @@
     {% endblock %}
 
  </body>
+
+<footer>
+    <div class="container">
+       <div style="text-align: center; padding-top: 23px;">
+            <a href="https://www.linkedin.com/in/mariagrandury/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/magrandury"><i class="fa fa-github"></i></a>
+            <a href="mailto: mariagrandury@gmail.com"><i class="fa fa-envelope"></i></a>
+       </div>
+    </div>
+    </div>
+    <div class="container">
+        <div style="text-align: center;padding: 23px;">Copyright © Maria Grandury 2020</div>
+    </div>
+</footer>
+
 </html>
