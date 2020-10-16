@@ -1,7 +1,20 @@
 from flask import Flask, render_template, request
-import pinkbot
+import media
 
 app = Flask(__name__)
+
+"""
+Objets
+"""
+
+
+movies = {
+    'movie1': media.movie1,
+    'movie2': media.movie2,
+    'movie3': media.movie3,
+    'movie4': media.movie4,
+    'movie5': media.movie5
+}
 
 
 """
@@ -23,7 +36,7 @@ def stats():
     return render_template("stats.html")
 
 
-conversation = ['','']
+conversation = ['', '']
 
 
 @app.route("/pinkbot")
@@ -52,7 +65,7 @@ def stories():
 
 @app.route("/media")
 def media():
-    return render_template("media.html")
+    return render_template("media.html", movies=movies)
 
 
 if __name__ == "__main__":

@@ -82,8 +82,8 @@ li a:hover {
 /* -- BLOG */
 .card {
   background-color: #f8b9d0;
-  padding: 20px;
-  margin: 32px;
+  padding: 20px 100px;
+  margin: 20px 164px
 }
 
 img {

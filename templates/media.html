@@ -10,19 +10,19 @@
     <div class="container">
         <h2 style="text-align: center; padding-top: 23px;">Uplifting Movies</h2>
         <div class="card">
-          <h4>The Long Goodbye</h4>
-          <p>Description...</p>
+            <h3>{{movies.movie1.title}}</h3>
+            <p><b>Director:</b> {{movies.movie1.director}}</p>
+            <p><b>With:</b> {{movies.movie1.cast1}} and {{movies.movie1.cast2}}</p>
+            <p>{{movies.movie1.plot}}</p>
+            <img src="{{movies.movie1.cover}}" alt="Image 1" style="width:223px;height:333px;">
         </div>
 
         <div class="card">
-          <h4>Mondays at Racine</h4>
-          <p>Description...</p>
+          <h3>{{movies.movie2.title}}</h3>
+          <p>{{movies.movie2.plot}}</p>
+            <img src="{{movies.movie2.cover}}" alt="Image 2" style="width:223px;height:333px;">
         </div>
 
-        <div class="card">
-          <h4>Miss You Already</h4>
-          <p>Description...</p>
-        </div>
 
     </div>
 
