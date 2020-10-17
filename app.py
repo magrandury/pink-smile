@@ -32,8 +32,28 @@ Routes
 
 
 @app.route("/")
+def home():
+    return render_template("home.html")
+
+
+@app.route("/stats")
 def stats():
     return render_template("stats.html")
+
+
+@app.route("/organizations")
+def organizations():
+    return render_template("organizations.html")
+
+
+@app.route("/stories")
+def stories():
+    return render_template("stories.html")
+
+
+@app.route("/media")
+def media():
+    return render_template("media.html", movies=movies)
 
 
 conversation = ['', '']
@@ -51,21 +71,6 @@ def get_bot_response():
     conversation.append(userText)
     conversation.append(botText)
     return render_template("pinkbot.html", conversation=conversation)
-
-
-@app.route("/organizations")
-def organizations():
-    return render_template("organizations.html")
-
-
-@app.route("/stories")
-def stories():
-    return render_template("stories.html")
-
-
-@app.route("/media")
-def media():
-    return render_template("media.html", movies=movies)
 
 
 if __name__ == "__main__":
