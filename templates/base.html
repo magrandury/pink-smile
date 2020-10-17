@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Pink Smile</title>
     <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" type="image/x-icon" href="static/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
     <!-- Add icon library for social buttons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -16,11 +16,12 @@
         <h1>Pink Smile</h1>
         <strong><nav>
           <ul>
-              <li><a href="{{ url_for('stats') }}">Stats</a></li>
-              <li><a href="{{ url_for('pinkbot') }}">PinkBot</a></li>
-              <li><a href="{{ url_for('organizations') }}">Organizations</a></li>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('stats') }}">Statistics</a></li>
               <li><a href="{{ url_for('media') }}">Media</a></li>
-              <li><a href="{{ url_for('stories') }}">Stories</a></li>
+              <li><a href="{{ url_for('organizations') }}">Organizations</a></li>
+              <li><a href="{{ url_for('stories') }}">Stories*</a></li>
+              <li><a href="{{ url_for('pinkbot') }}">PinkBot*</a></li>
           </ul>
         </nav></strong>
       </div>
